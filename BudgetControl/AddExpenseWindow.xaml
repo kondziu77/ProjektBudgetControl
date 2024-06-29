@@ -1,0 +1,32 @@
+﻿<Window x:Class="BudgetControl.AddExpenseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj Wydatek" Height="300" Width="450">
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#3498db" Offset="0"/>
+                    <GradientStop Color="#2980b9" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                <TextBlock Text="Kwota:" Foreground="White"/>
+                <TextBox x:Name="AmountTextBox" Width="200" Margin="5"/>
+                <TextBlock Text="Kategoria:" Foreground="White"/>
+                <ComboBox x:Name="CategoryComboBox" Width="200" Margin="5" Height="20">
+                    <ComboBoxItem Content="Jedzenie"/>
+                    <ComboBoxItem Content="Higiena"/>
+                    <ComboBoxItem Content="Subskrypcje"/>
+                    <ComboBoxItem Content="Rachunki"/>
+                    <ComboBoxItem Content="Transport"/>
+                    <ComboBoxItem Content="Rozrywka"/>
+                    <ComboBoxItem Content="Inne"/>
+                </ComboBox>
+                <TextBlock Text="Komentarz:" Foreground="White"/>
+                <TextBox x:Name="CommentTextBox" Width="200" Margin="5"/>
+                <Button Content="Dodaj" Width="100" Margin="5" Click="AddExpenseButton_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
